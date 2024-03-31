@@ -23,7 +23,6 @@ public class WebhookController {
 
     @GetMapping("")
     ResponseEntity<AppLog> handleMessage() {
-        log.info("test");
         return ResponseEntity.ok(appLogRepository.findById(1000L).orElse(new AppLog()));
     }
 }
